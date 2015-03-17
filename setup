@@ -2,6 +2,7 @@
 
 echo "setup"
 
+#setup dir
 sudo mkdir /rtecon
 sudo chmod 777 /rtecon
 sudo mkdir /rtecon/src
