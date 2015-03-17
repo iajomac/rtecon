@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "setup"
+
+sudo mkdir /rtecon
+sudo chmod 777 /rtecon
+sudo mkdir /rtecon/src
+sudo chmod 777 rtecon/src
+sudo yum install git
+sudo yum install java-1.8.0-openjdk.x86_64
+cd /rtecon
+git init
+git config --global user.name "iajomac"
+git config --global user.email "iajomac@gmail.com"
+
+
+echo "done"
+
