@@ -12,7 +12,7 @@ sudo chmod 777 rtecon/src
 cd /rtecon
 git init
 git config --global user.name "iajomac"
-git config --dglobal user.email "iajomac@gmail.com"
+git config --global user.email "iajomac@gmail.com"
 
 #application installs
 sudo yum install git
