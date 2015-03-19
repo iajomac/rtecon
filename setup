@@ -12,7 +12,7 @@ sudo chmod 777 rtecon/src
 cd /rtecon
 git init
 git config --global user.name "iajomac"
-git config --global user.email "iajomac@gmail.com"
+git config --dglobal user.email "iajomac@gmail.com"
 
 #application installs
 sudo yum install git
@@ -21,19 +21,18 @@ sudo yum install nginx.x86_64
 
 echo "done"
 
-sudo mkdir /temp
-cd /temp
+sudo mkdir /tmp
+cd /tmp
 
 #scala install
 sudo wget http://www.scala-lang.org/files/archive/scala-2.11.6.tgz
 sudo tar zxf scala-2.11.6.tgz
-#sudo mv scala-2.11.6 /usr/share/scala
-#sudo rm scala-2.11.6.tgz
-
-sudo ln -s /usr/share/scala/bin/scala /usr/bin/scala
-sudo ln -s /usr/share/scala/bin/scalac /usr/bin/scalac
-sudo ln -s /usr/share/scala/bin/fsc /usr/bin/fsc
-sudo ln -s /usr/share/scala/bin/sbaz /usr/bin/sbaz
-sudo ln -s /usr/share/scala/bin/sbaz-setup /usr/bin/sbaz-setup
-sudo ln -s /usr/share/scala/bin/scaladoc /usr/bin/scaladoc
-sudo ln -s /usr/share/scala/bin/scalap /usr/bin/scalap
+sudo mv scala-2.11.6 /usr/share/
+sudo rm scala-2.11.6.tgz
+sudo ln -s /usr/share/scala-2.11.6/bin/scala /usr/bin/scala
+sudo ln -s /usr/share/scala-2.11.6/bin/scalac /usr/bin/scalac
+sudo ln -s /usr/share/scala-2.11.6/bin/fsc /usr/bin/fsc
+sudo ln -s /usr/share/scala-2.11.6/bin/sbaz /usr/bin/sbaz
+sudo ln -s /usr/share/scala-2.11.6/bin/sbaz-setup /usr/bin/sbaz-setup
+sudo ln -s /usr/share/scala-2.11.6/bin/scaladoc /usr/bin/scaladoc
+sudo ln -s /usr/share/scala-2.11.6/bin/scalap /usr/bin/scalap
