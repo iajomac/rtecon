@@ -14,10 +14,19 @@ git init
 git config --global user.name "iajomac"
 git config --global user.email "iajomac@gmail.com"
 
+
+#remove unwanted jave
+sudo yum remove java-1.7.0-openjdk.x86_64            
+sudo yum remove java-1.8.0-openjdk.x86_64            
+sudo yum remove java-1.8.0-openjdk-devel.x86_64      
+sudo yum remove java-1.8.0-openjdk-headless.x86_64   
+
+
 #application installs
 sudo yum install git
-sudo yum install java-1.8.0-openjdk.x86_64
+sudo yum install java-1.8.0-openjdk-devel.x86_64
 sudo yum install nginx.x86_64
+
 
 echo "done"
 
@@ -28,7 +37,6 @@ cd /tmp
 sudo wget http://www.scala-lang.org/files/archive/scala-2.11.6.tgz
 sudo tar zxf scala-2.11.6.tgz
 sudo mv scala-2.11.6 /usr/share/
-sudo rm scala-2.11.6.tgz
 sudo ln -s /usr/share/scala-2.11.6/bin/scala /usr/bin/scala
 sudo ln -s /usr/share/scala-2.11.6/bin/scalac /usr/bin/scalac
 sudo ln -s /usr/share/scala-2.11.6/bin/fsc /usr/bin/fsc
@@ -36,3 +44,18 @@ sudo ln -s /usr/share/scala-2.11.6/bin/sbaz /usr/bin/sbaz
 sudo ln -s /usr/share/scala-2.11.6/bin/sbaz-setup /usr/bin/sbaz-setup
 sudo ln -s /usr/share/scala-2.11.6/bin/scaladoc /usr/bin/scaladoc
 sudo ln -s /usr/share/scala-2.11.6/bin/scalap /usr/bin/scalap
+
+
+#nginx conf
+sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.original
+sudo ln -s  /rtecon/conf/nginx.conf /etc/nginx/nginx.conf
+
+#maven install
+sudo wget http://apache.mirror.vexxhost.com/maven/maven-3/3.3.1/binaries/ 
+sudo tar zxf apache-maven-3.3.1-bin.tar.gz
+sudo mv apache-maven-3.3.1 /usr/share
+sudo ln -s /usr/share/apache-maven-3.3.1/bin/mvn      /usr/bin/mvn
+sudo ln -s /usr/share/apache-maven-3.3.1/bin/mvnDebug /usr/bin/mvnDebug
+sudo ln -s /usr/share/apache-maven-3.3.1/bin/mvnyjp   /usr/bin/mvnyjp
+
+
